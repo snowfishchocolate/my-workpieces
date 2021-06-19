@@ -1,0 +1,22 @@
+
+$bg_color:#051a42;
+$blue_dark:#000037;
+$blue_light:#50bfe6;
+@mixin size($w,$h,$bds,$bg:#ffffff){
+    width: $w;
+    height:$h;
+    border-radius: $bds;
+    background: $bg;
+}
+@mixin flex($j,$a){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+}
+@mixin font($fs,$fw,$lh,$color,$ls:normal){
+    font-size: $fs;
+    font-weight:$fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color:$color;
+}

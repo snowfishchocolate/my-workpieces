@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{box-sizing: border-box;}
+    html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+	width: calc(100vw + 18px);
+	overflow: auto;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+    body{
+        margin:0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background:radial-gradient(circle at center,pink,rgba(0, 55, 128, 0.849),blue);
+        background-image: url(./POP.JPG);
+    }
+        
+        
+   
+   
+    .container{
+        width:90%;
+        height: 85vh;
+        margin:0 auto;
+        background-color: rgba(22, 103, 196, 0.856);
+        overflow-y: scroll;
+        /* 加上卷軸 */
+    }
+    /* 讓卷軸從畫面上隱藏 */
+    .container::-webkit-scrollbar {
+    display: none;
+    }
+    .nav{
+        width: 90%;
+        height: 15vh;
+        background-color: rgba(0, 0, 0, 0.37);
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        position: fixed;
+        margin-left: 5%;
+        
+    }
+    .name{
+        margin-left: 10px;
+        
+    }
+    .avator{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-image: url(./草莓大福.jpg);
+        background-position: center;
+        margin-left: 15px;
+        
+    }
+    .chatroom{
+        width: 100%;
+        height: 70vh; 
+        display: flex;
+        flex-direction: column;
+        margin-top:8%;
+        /* justify-content: space-between; */
+    }
+    .leftchat{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .leftchat .chatimg img{
+        background-image: url(./乃烙.jpg);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .lefttext{
+        background-color:aliceblue;
+        width: fit-content;
+        height: fit-content;
+        word-break: break-all;
+        margin: auto 0;
+        margin-left: 10px;
+        border-radius: 20px;
+        padding: 10px;
+        border:1px solid black; 
+        margin-left: 5px;
+    }
+
+    
+    
+   
+    .footer{
+        width: 90%;
+        height: 15vh;
+        background-color: rgba(2, 20, 36, 0.794);
+        margin:0 auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: relative;
+    }
+    .input{
+        width: 60%;
+        height: 35px;
+        position: absolute;
+        left:40%;
+        top: 50%;
+        transform:translate(-50%,-50%);
+        background-color:rgb(53, 52, 52);
+        font-size: 20px;
+        color: white;
+    }
+    ::placeholder{
+        color: white;
+        opacity: 1;/*firefox用*/
+    }
+    .send{
+        position: absolute;
+        right:24%;
+        top:30px;
+        background-color: rgba(0, 0, 0, 0.219);
+        width: 50px;
+        height: 50px;
+        background-color: rgba(100, 148, 237, 0.466);
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+    }
+    .right-send{
+        position: absolute;
+        right:15%;
+        top:30px;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.219);
+        background-color: rgba(233, 150, 122, 0.5);
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+    }
+   
+    </style>
+</head>
+<body>
+            <div class="nav">
+                        <div class="avator"></div>
+                        <div class="name">
+                            <div class="bigname"><span style="color: cornsilk;">**草莓大福**</div>
+                            <div class="smallname"><span style="color: cornsilk;">阿福</div>
+                        </div>
+            </div>
+            <div class="container">
+                <section class="chatroom" >   
+                    <!-- <div class="leftchat">
+                            <div style="display:flex;">
+                                <div class="chatimg"></div>
+                                <div class="lefttext">${inputValue}</div>
+                            </div>    
+                        </div> -->
+                        <!-- <div class="leftchat" style="width: 80%;display: flex;flex-direction: column;margin-bottom: 10px;margin-top: 8%;">
+                            <div style="display: flex;">
+                                <div class="chatimg" ><img src="./乃烙.jpg" style="width: 70px;height: 70px;border-radius: 50%;margin-left: 10px;"></div>
+                                <div class="lefttext" style="background-color:aliceblue;width: fit-content;height: fit-content;
+                                word-break: break-all;margin: auto 0;margin-left: 10px;
+                                border-radius: 20px;padding: 10px;border:1px solid black; margin-left: 5px;">${inputValue}</div>
+                            </div>
+                                
+                        </div> -->
+                        
+
+                        <!-- <div class="rightchat" style="background-color: darkmagenta;width: 80%;display: flex;flex-direction: column;margin-top: 8%;align-self: flex-end;">
+                            <div style="display: flex;justify-content: flex-end;;">
+                                <div class="righttext" style="
+                                background-color:rgba(245, 215, 138, 0.972);width: fit-content;height: fit-content;word-break: break-all;margin: auto 0;border-radius: 20px;padding: 10px;border: 1px solid rgb(114, 75, 3);margin-right: 5px;">${inputValue}</div>
+                                <div class="chatimg"><img src="./雞蛋.jpg" style="width: 70px;height: 70px;border-radius: 50%;"></div>
+                            </div> 
+                        </div> -->    
+                </section>
+            </div>
+            <div class="footer">
+                <form >
+                    <input class="input" placeholder="打字區，隨便打點東西吧，阿嬤裹腳布又臭又長">
+                    <button class="send" >🌒</button>
+                    <button class="right-send" >🌏</button>
+                </form>
+            </div>
+            
+        <script>
+         var clickBtn = document.querySelector('.send');
+            clickBtn.addEventListener('click',function(e){
+                e.preventDefault();
+                var inputValue = document.querySelector('.input').value;
+                var resultValue= document.querySelector('.chatroom');
+                resultValue.innerHTML += 
+        
+                `
+                <div class="leftchat" style="width: 80%;display: flex;flex-direction: column;margin-bottom: 10px;">
+                            <div style="display: flex;">
+                                <div class="chatimg" ><img src="./乃烙.jpg" style="width: 70px;height: 70px;border-radius: 50%;margin-left: 10px;margin-top: 10px;"></div>
+                                <div class="lefttext" style="background-color:aliceblue;width: fit-content;height: fit-content;
+                                word-break: break-all;margin: auto 0;margin-left: 10px;
+                                border-radius: 20px;padding: 10px;border:1px solid black; margin-left: 5px;">${inputValue}</div>
+                            </div>    
+                        </div>
+                       
+                       
+                `                 
+});  
+
+var clickBtn = document.querySelector('.right-send');
+            clickBtn.addEventListener('click',function(e){
+                e.preventDefault();
+                var inputValue = document.querySelector('.input').value;
+                var resultValue = document.querySelector('.chatroom');
+                resultValue.innerHTML += 
+               
+                `<div class="rightchat" style="width: 80%;display: flex;flex-direction: column;margin-top: 8%;align-self: flex-end;">
+                            <div style="display: flex;justify-content: flex-end;;">
+                                <div class="righttext" style="
+                                background-color:rgba(245, 215, 138, 0.972);width: fit-content;height: fit-content;word-break: break-all;margin: auto 0;border-radius: 20px;padding: 10px;border: 1px solid rgb(114, 75, 3);margin-right: 5px;">${inputValue}</div>
+                                <div class="chatimg"><img src="./雞蛋.jpg" style="width: 70px;height: 70px;border-radius: 50%;"></div>
+                            </div> 
+                        </div>
+                ` 
+})
+        </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  姓名<input class="name">
+  年齡<input class="age">
+  性別<input class="gender">
+  <button class="send">送出</button>
+  <button class="check">查看</button>
+  <table>
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>年齡</th>
+        <th>性別</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+          <td class="tname"></td>
+          <td class="tage"></td>
+          <td class="tgender"></td>
+          <td><button>刪除</button></td>
+        </tr> -->
+    </tbody>
+  </table>
+  </table>
+
+  <script>
+    var allData = [];
+    function updateView(){
+    // 將資料加入畫面，重新長資料
+    var result = document.querySelector('tbody');
+          console.log(result.innerHTML);
+          result.innerHTML = '';
+          allData.forEach(function(data,index){
+                    result.innerHTML +=
+                    `
+                  <tr>
+                      <td>${data["name"]}</td>
+                      <td>${data["age"]}</td>
+                      <td>${data["gender"]}</td>
+                      <td><button class="delete-btn" data-index = "${index}";>刪除</button></td>
+                    </tr>
+                    `
+                  })   
+      }
+//  xxxxxxxxxxxxxxxxxxxxxxxxxxxx     // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    function delBtnAddClickEven() {
+      var deleteBtns = document.querySelectorAll('.delete-btn');
+          deleteBtns.forEach(function(deleteBtn){
+
+                deleteBtn.addEventListener('click',function(){
+                      // 有function就會產書this,this代表document.querySelectorAll('.delete-btn')
+                      // **console.log(this.getAttribute('class'));**
+                      var index = document.querySelector('data-index')
+                      allData.splice(index,1);
+                      console.log(allData);
+                      updateView();
+                      // 再次綁定監聽事件
+                      delBtnAddClickEven();
+                })
+          }) 
+    }
+
+
+    var clickBtn = document.querySelector('.send');
+        clickBtn.addEventListener('click', function () {
+              // 將資料存入畫面
+          var nameValue = document.querySelector('.name').value;
+          var ageValue = document.querySelector('.age').value;
+          var genderValue = document.querySelector('.gender').value;
+          
+                // 將資料存起來，存入陣列當中
+          var newData = {"name":nameValue, "age":ageValue, "gender":genderValue,"index":1};
+                allData.push(newData);
+
+
+          var result = document.querySelector('tbody');
+          // 把資料一筆一筆拿出來，更新畫面
+          console.log(result.innerHTML);
+          result.innerHTML = '';
+          allData.forEach(function(data,index){
+            console.log(data);
+            // 長畫面
+            result.innerHTML +=
+            `
+          <tr>
+              <td>${data["name"]}</td>
+              <td>${data["age"]}</td>
+              <td>${data["gender"]}</td>
+              <td><button class="delete-btn" data-index = "${index}";>刪除</button></td>
+            </tr>
+            `
+          })         
+          // result.innerHTML +=
+          //   `
+          // <tr>
+          //     <td>${nameValue}</td>
+          //     <td>${ageValue}</td>
+          //     <td>${genderValue}</td>
+          //     <td><button class="delete-btn" data-index = "1";>刪除</button></td>
+          //   </tr>
+          //   `
+          
+          updateView();
+          delBtnAddClickEven();          
+        })
+        
+  
+
+    
+   
+
+    
+      
+
+
+//1. 按下送出，吃到INPUT VALUE // TO 2、 
+//2. 輸出VALUE，每次的輸出都重新長畫面// TO 3
+// 2-1 function update(){清除innerHTML、生方塊}
+//3. 按下刪除，綁定監聽 TO 2
+// 3-1 綁定所有刪除鍵的監聽
+// 3-2 確認按下刪除鍵時，log出數字
+
+
+
+  </script>
+</body>
+
+</html>

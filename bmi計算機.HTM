@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html{
+            margin:0;
+            padding:0;
+        }
+        body{
+            width: 90%;
+            height: 100vh;
+            border:2px dotted cyan;
+            margin:0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .title{
+            font-size: 35px;
+            font-color;
+            position: absolute;
+            top: 3px;
+            left: 469px;
+            color: blue;
+        }
+        .index{
+            position: absolute;
+            top: 50px;
+            left: 251px;
+            background-color: rgba(184, 135, 11, 0);
+            padding: 5px;
+        }
+        .formula{
+            position: absolute;
+            top: 106px;
+            left: 245px;
+            background-color: rgba(184, 11, 170, 0);
+            padding: 5px;
+        }
+        table, th, td{
+
+            border: 2px dotted rgb(0, 255, 255);
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            position: absolute;
+            left: 222px;
+            top:502px
+        }
+        .myheight{
+            display: inline;
+            position: absolute;
+            left: 186px;
+            top: 157px;
+            background-color: rgba(0, 100, 0, 0);
+        }
+        .result{
+            position: absolute;
+            left: 444px;
+            top: 234px;
+        }
+        .value{
+            text-align: center;
+        }
+        .calc, .refill{
+            background-color: cornflowerblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <content class="title">
+        BMI 計算機
+    </content>
+    <section>
+        <content class="index">
+            身體質量指數(Body Mass Index，簡稱BMI)是公認用來估計肥胖程度的方法
+
+        </content>
+
+        <content class="formula">
+            BMI=體重(公斤)/身高的平方(公尺)
+        </content>
+
+        <div class="myheight"> 
+            我的身高<input class="height">公分</input>
+            我的體重<input class="weight">公斤</input>
+            <button class="calc">計算</button>
+            <button class="refill">重新填寫</button>
+        </div>
+
+        <input class="result"></input>
+
+        <table>
+            <tr><td colspan="3" class="value">BNI值</td></tr>
+            <tr>
+                <td></td>
+                <td>男性</td>
+                <td>女性</td>
+            </tr>
+            <tr>
+                <td>體重過輕</td>
+                <td> <20  </td>
+                <td> <19  </td>
+            </tr>
+            <tr>
+                <td>正常範圍</td>
+                <td>20-25</td>
+                <td>19-25</td>
+            </tr>
+            <tr>
+                <td>體重過重</td>
+                <td>25-30</td>
+                <td>35-30</td>
+            </tr>
+            <tr>
+                <td>肥胖</td>
+                <td>30-40</td>
+                <td>30-40</td>
+            </tr>
+            <tr>
+                <td>病態肥胖</td>
+                <td> >40 </td>
+                <td> >40</td>
+            </tr>
+        </table>
+    </section>
+    <script>
+        var clickBtn=document.querySelector('.calc')
+        clickBtn.addEventListener('click', function () {
+            var inputvalue1 = document.querySelector('.height').value;
+            var inputvalue2 = document.querySelector('.weight').value;
+            document.querySelector('.result').value= Number(inputvalue2) / [Number((inputvalue1/100)**2)];
+            
+        })
+
+        var clickBtn=document.querySelector('.refill')
+        clickBtn.addEventListener('click', function undo(e) {
+            document.querySelector('.weight').value= '';
+            document.querySelector('.height').value= '';
+            document.querySelector('.result').value='';
+            bmiText.style.display="none";
+            resultText.innerHTML=0;
+            return  
+        })
+    </script>
+</body>
+</html>

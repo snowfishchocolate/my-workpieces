@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    國文<input  class="chinese">分
+    英文<input  class="eng">分
+    數學<input  class="math">分
+    平均<input  class="average">分
+    <button class="calc">送出</button>
+    <!-- <button class="pass">及格</button> -->
+    <div class="pass"></div>
+        <script>
+            var clickBtn = document.querySelector('.calc')
+            clickBtn.addEventListener('click', function () {
+                var chiscoreValue = document.querySelector('.chinese').value;
+                var engscoreValue = document.querySelector('.eng').value;
+                var mathscoreValue = document.querySelector('.math').value;
+                var average = document.querySelector('.average').value
+                            = [(Number(chiscoreValue) + Number(engscoreValue) + Number(mathscoreValue)) / 3];
+                // average = [(Number(chiscoreValue) + Number(engscoreValue) + Number(mathscoreValue)) / 3]
+                // average.innerHTML=(Number(chiscoreValue) + Number(engscoreValue) + Number(mathscoreValue)) / 3
+
+
+                var pass = document.querySelector('.pass');
+                if (average >= 60) {
+                     pass.innerHTML = "及格" 
+                    } 
+                if (average <= 60) {
+                     pass.innerHTML = "不及格" 
+                    }
+
+            })
+
+
+
+        </script>
+</body>
+
+</html>

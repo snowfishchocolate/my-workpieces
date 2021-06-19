@@ -1,0 +1,187 @@
+@import'moonvariable';
+html.body{
+    padding:0;
+    margin:0;
+}
+body{
+    @include flex(center,center);
+    height: 100vh;
+    background-color: $bg_color;
+    position: relative;
+    width: 100vh;
+}
+.card{
+    @include size(600px,400px,20px, linear-gradient(200deg,$blue_light,$blue_dark));
+    border:0.5px solid black;
+    position: absolute;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    // 讓外面星星不要被看到hidden起來
+} 
+    
+
+
+.text{
+    @include font(30px,10px,400px,#ffffff);
+    display: flex;
+    justify-content: center;
+}
+.moon{
+    height: 120px;
+    width: 120px;
+    box-shadow: 38px 0 0 yellow;
+    border-radius:100px;
+    transform:rotate(20deg);
+    margin-top: 5%;
+}
+.square{
+    width: 90px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 150%;
+    margin-top: 100%;
+   
+}
+.bigcircle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left:190%;
+    top:55%;
+}
+.smallcircle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left:160%;
+    top:65%;
+
+}
+
+.picture123 img{
+  width: 70%;
+  margin-left: 70%;
+  margin-top: 10%;
+}
+.picture1234 img{
+  width: 30%;
+  margin-left: 2%;
+  margin-top: 15%;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(rgb(1, 11, 17), rgba(2, 56, 87, 0.7));
+  }
+  
+//   老師版星星
+// .allstart{
+//       width: 600px;
+//       height: 100%;
+//       position: absolute;
+//       overflow: hidden;
+//       @keyframes drop {
+//         0%{
+//           transform: translate(0,0);
+//         }
+//         90%{
+//           transform: translate(-100px,450px);
+//         }
+//         100%{
+//           opacity: 0;
+//         }
+//     }
+//     @for $i from 1 to 31{
+//       .start#{$i} {
+//         width: 10px;
+//         height: 10px;
+//         border-radius: 50%;
+//         background-color: azure;
+//         position: absolute;
+//         top:random(2)*-10%;
+//         left: random(100)*1%;
+//         animation: drop  ease  infinite ;
+//         animation-delay: random(5)*1s;
+//         animation-duration: random(25)*15s;
+//       }
+//     }
+// }
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// 網路版星星
+  #stars {
+    margin: 0 auto;
+    max-width: 1600px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+   
+  }
+  .star {
+    display: block;
+    width: 1px;
+    background: transparent;
+    position: relative;
+    opacity: 0;
+    /*过渡动画*/ 
+    animation: star-fall 3s linear infinite;
+    -webkit-animation: star-fall 3s linear infinite;
+    -moz-animation: star-fall 3s linear infinite;
+  }
+  .star:after {
+    content: '';
+    display: block;
+    border: 0px solid #fff;
+    border-width: 0px 90px 2px 90px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, .5);
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+    /*变形*/       
+    transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    -webkit-transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    -moz-transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    transform-origin: 0% 100%;
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+  }
+  @keyframes star-fall {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translate3d(0, 0, 0);
+      -webkit-transform: scale(0.5) translate3d(0, 0, 0);
+      -moz-transform: scale(0.5) translate3d(0, 0, 0);
+    }
+    50% {
+      opacity: 1;
+      transform: translate3d(-200px, 200px, 0);
+      -webkit-transform: translate3d(-200px, 200px, 0);
+      -moz-transform: translate3d(-200px, 200px, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2) translate3d(-300px, 300px, 0);
+      -webkit-transform: scale(1.2) translate3d(-300px, 300px, 0);
+      -moz-transform: scale(1.2) translate3d(-300px, 300px, 0);
+    }
+  }
+
+
+
+
+  
+  
+  
+  
+
+
