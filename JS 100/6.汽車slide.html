@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .container{
+            width: 70%;
+            height: 70%;
+            border: 8px solid rgb(0, 153, 255);
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            position: relative;
+           
+           
+        }
+        .slider{
+            width: 100%;
+            height: 100%;
+        }
+        .slide{
+            background-position: center;
+            background-size: cover; 
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            
+            
+         } 
+        .slide1{
+            background-image: url(./6-img/contBcg-0.jpeg);
+            
+        }
+        .slide2{
+            background-image: url(./6-img/contBcg-1.jpeg);
+        }
+        .slide3{
+            background-image: url(./6-img/contBcg-2.jpeg);
+        }
+        .slide4{
+           
+            background-image: url(./6-img/contBcg-3.jpeg);
+        }
+        .slide5{
+           
+            background-image: url(./6-img/contBcg-4.jpeg);
+        }
+        .Lbtn{
+            position: absolute;
+            left: -2%;
+            top:50%;
+            transform: translateY(-50%);
+            padding:20px 10px;
+            background-color: rgb(0, 153, 255);
+            cursor: pointer;
+        }
+        .Rbtn{
+            position: absolute;
+            left: 98%;
+            top:50%;
+            transform: translateY(-50%);
+            padding:20px 10px;
+            background-color: rgb(0, 153, 255);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Lbtn">◁</div>
+        <div class="Rbtn">▷</div>
+        <div class="slider">
+            <div class="slide slide1"><img src="./6-img/" alt=""></div>
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+            <div class="slide slide4"></div>
+            <div class="slide slide5"></div>
+        </div>
+    </div>
+    <script>
+        var slideImgs=document.querySelectorAll('.slide');
+        console.log(slideImgs[4]);
+        var current=0;
+        //clear all imgs
+        function reset(){
+            for(let i=0;i < slideImgs.length ;i++){
+                slideImgs[i].style.display='none';
+            }
+        }
+        
+        //initial img
+        function startSlide(){
+            reset();
+            slideImgs[0].style.display='block';
+        
+        }
+        function slideLeft(){
+            reset();
+            slideImgs[current - 1].style.display='block';
+            current--;
+            
+            console.log(current);
+          
+        }
+        function slideRight(){
+            reset();
+            slideImgs[current + 1].style.display='block';
+            current++;
+        }
+        //left arrow click
+        var LclickBtn=document.querySelector('.Lbtn');
+        LclickBtn.addEventListener('click',function(){
+            if(current==0){
+                current=slideImgs.length;
+            }
+            slideLeft();
+        })
+        var Rclickbtn=document.querySelector('.Rbtn');
+        Rclickbtn.addEventListener('click',function(){
+            if(current==slideImgs.length - 1){
+                current=-1;
+            }
+            slideRight();
+        })
+        startSlide();
+    </script>
+</body>
+</html>

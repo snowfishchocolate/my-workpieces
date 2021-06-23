@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-image: url(./5-img/wood.jpeg);
+            position: relative;
+        }
+        .container{
+            width: 600px;
+            height: 400px;
+            background-image: url(./5-img/wood.jpeg);
+            background-position: center;
+            border:white 1px solid;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            box-shadow:5px 10px 10px black ;
+        }
+        .left {
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 3px;
+            box-shadow: 5px 5px 5px black;
+            position: absolute;
+            left:21%;
+            top:77%;
+            cursor: pointer;
+            
+            
+        }
+        .left:hover,.right:hover{
+            background-color: rgb(60, 206, 243);
+            transition-duration: 0.3s;
+        }
+        .left:focus,.right:focus{
+            outline:20px rgb(236, 79, 87) ;
+
+        }
+        .right{
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 3px;
+            box-shadow: 5px 5px 5px black;
+            position: absolute;
+            left:70%;
+            top:77%;
+            cursor:pointer;
+        }
+        h2{
+            font-size:50px;
+            color: white;
+            margin: 30px 160px;
+        }
+        .show{
+            font-size: 130px;
+            margin:0 270px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>COUNTER</h2>
+        <div class="show"></div>
+        <div class="left">Lower</div>
+        <div class="right">Add</div>
+    </div>
+    <script>
+        // document.querySelector('.left').classList.add(tabindex='0',hidefocus="true",onfocus='alert',onblur='alert');
+        var count=0;
+        var showBox=document.querySelector('.show');
+        showBox.innerHTML=count;
+        showBox.style.color='brown';
+        var clickBtn=document.querySelector('.left');
+        clickBtn.addEventListener('click',function(){
+           
+            count--;
+            showBox.textContent=count;//和innerHTML功效類似
+
+                    function updateColor(){
+                    var color='brown';
+                    if(count>0){
+                        color='green';
+                    }else if(count<0){
+                        color='blue';
+                    }
+                    showBox.style.color=color
+                    }
+                    updateColor();
+        })
+        var clickBtn=document.querySelector('.right');
+        clickBtn.addEventListener('click',function(){
+           
+            count++;
+            showBox.textContent=count;//和innerHTML功效類似
+
+
+                function updateColor(){
+                var color='brown';
+                if(count>0){
+                    color='green';
+                }else if(count<0){
+                    color='blue';
+                }
+                showBox.style.color=color
+                }
+                updateColor();
+        })
+       
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       *{
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+       body{
+          
+           background-image: url(./7-img/questionBcg.jpeg);
+           background-position: center;
+           background-size: cover;
+       }
+       .background{
+           width: 100%;
+           height: 100vh;
+           background-color: rgba(255, 255, 255, 0.424);
+           position: relative;
+           overflow: hidden;
+       }
+       .container{
+           width: 70%;
+           height: 70%;
+           position: absolute;
+           left: 50%;
+           top:50%;
+           transform: translate(-50%,-50%);
+       }
+       p{
+           color: red;
+           text-align: center;
+           font-size: 20px;
+       }
+       h1{
+           text-align: center;;
+       }
+       .photo{
+           background-position: center;
+           background-size: cover;
+           width: 80px;
+           height: 80px;
+           border-radius: 50%;
+           margin: 0 auto;
+       }
+       .b1{
+           background-image: url(./7-img/customer-0.jpg);
+       }
+       .b2{
+           background-image: url(./7-img/customer-1.jpg);
+       }
+       .b3{
+           background-image: url(./7-img/customer-2.jpg);
+       }
+       .b4{
+           background-image: url(./7-img/customer-3.jpg);
+       }
+       .b5{
+           background-image: url(./7-img/customer-4.jpg);
+       }
+       .name{
+           text-align: center;
+       }
+       .star{
+           text-align: center;
+       }
+       .text-area{
+           width: 60%;
+           height: fit-content;
+           text-align: center;
+           margin: 0 auto;
+           position: relative;
+       }
+       .text-area:empty::before{
+           content: '5464';
+       }
+       .arrow{
+           color: red;
+           text-align: center;
+           line-height: 100px;
+           border: red 2px solid;
+           font-size: 30px;
+       }
+       .l{
+           width: 40px;
+           height: 100px;
+           background-color: rgba(0, 255, 255, 0.027);
+           cursor: pointer;
+           position: absolute;
+           left: 8%;
+           top:94%;
+           border-radius: 50%;
+          
+           
+       }
+       .r{
+           width: 40px;
+           height: 100px;
+           background-color:rgba(0, 255, 85, 0);
+           cursor: pointer;
+           position: absolute;
+           left: 90%;
+           top:96%;
+           border-radius: 50%;
+       }
+       .a1::before{
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis neque reprehenderit laborum, corporis explicabo assumenda. Porro impedit consectetur animi, reprehenderit recusandae sapiente at aliquam reiciendis modi ipsam rerum suscipit distinctio?';
+       }
+       .a2::before{
+           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit voluptatum illo? Quae fugiat aspernatur harum aperiam, quis eos officia.';
+       }
+       .a3::before{
+            content: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock';
+       }
+       .a4::before{
+           content:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don';
+       }
+       .a5::before{
+           content: 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn.';
+       }
+       .button{
+           margin-top: 20%;
+       }
+       .comma{
+           background-image: url(./7-img/comma.png);
+           width: 100px;
+           height: 100px;
+       }
+   </style>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <p>CLIENT</p><br>
+            <h1>TESTIMONIALS</h1><br><br>
+            <div class="img">
+                <img src="" alt="">
+                <div class="photo6">
+                    <div class="photo b1"></div>
+                    <div class="photo b2"></div>
+                    <div class="photo b3"></div>
+                    <div class="photo b4"></div>
+                    <div class="photo b5"></div>
+                </div><br>
+                <div class="name-area">
+                    <div class="name placeholder"></div>
+                    <div class="name SANDY">SANDY</div>
+                    <div class="name AMY">AMY</div>
+                    <div class="name TYRELL">TYRELL</div>
+                    <div class="name WANDA"> WANDA</div>
+                    <div class="name JOHN">JOHN</div>
+                </div><br>
+                <div class="star">🟌✮❅❆☆</div><br>
+            </div>
+            <div class="text-region">
+                <div class="text-area">
+                    <div class="text a1"></div>
+                    <div class="text a2"></div>
+                    <div class="text a3"></div>
+                    <div class="text a4"></div>
+                    <div class="text a5"></div>
+                    <!-- <div class="comma"></div> -->
+                </div>
+            </div>
+            <div class="button">
+                <div class="arrow l"><</div>
+                <div class="arrow r">></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var photo=document.querySelectorAll('.photo')
+        var text=document.querySelectorAll('.text');
+        var nameArea=document.querySelectorAll('.name');
+        var namearea=document.querySelector('.placeholder');
+        var current=0;
+        function reset(){
+            for(var i=0;i < text.length; i++){
+                text[i].style.display='none';
+            }
+            for(var i=0;i<photo.length;i++){
+                photo[i].style.display='none';
+            }
+            for(var i=0;i<nameArea.length;i++){
+                nameArea[i].style.display='none';
+        }
+    }
+        function start(){
+            reset();
+            text[0].style.display='block';
+            photo[0].style.display='block';
+            nameArea[0].style.display='block';       
+        }
+        function hidden(){
+            namearea.style.display='none'
+        }
+        function left(){
+           reset();
+           text[current - 1].style.display='block';
+           photo[current - 1].style.display='block';
+           nameArea[current - 1].style.display='block';
+           current--;
+        }
+        function right(){
+            reset();
+            text[current + 1].style.display='block';
+            photo[current+ 1].style.display='block';
+            nameArea[current + 1].style.display='block';
+            current++;
+        }
+      //點擊左邊按鈕
+
+        var leftBtn=document.querySelector('.l');
+        leftBtn.addEventListener('click',function(){
+                if(current==0){
+                        current=text.length;
+                }
+                if(current==0){
+                    current=photo.length;
+                }
+                if(current==0){
+                    current=nameArea.length;
+                    
+                }
+                hidden();
+                left(); 
+        })
+         //點擊右邊按鈕
+        var rightBtn=document.querySelector('.r');
+        rightBtn.addEventListener('click',function(){
+            if(current==text.length - 1){
+                current=-1;
+            }
+            if(current==photo.length - 1){
+                current=-1
+            }
+            if(current==nameArea.length - 1){
+                current=-1
+            }
+            hidden();
+            right();
+
+        })
+        hidden();
+        start();
+
+        
+    </script>
+</body>
+</html>

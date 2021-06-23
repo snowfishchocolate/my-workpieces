@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0%;
+      }
+      body {
+        position: relative;
+      }
+      /* body{
+            background-color: rgba(0, 0, 0, 0.712);
+            width: 100%;
+            height: 100%;
+            z-index: 90;
+            position: absolute;
+        } */
+      nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        align-items: center;
+      }
+      .donught img {
+        margin-top: 15px;
+      }
+      .function {
+        width: 180px;
+        display: flex;
+        justify-content: space-evenly;
+        color: pink;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .car img {
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+      }
+      .phone img {
+        width: 10px;
+        height: 10px;
+        margin-top: 35px;
+      }
+      .phone,
+      .car {
+        display: flex;
+      }
+      .car {
+        width: fit-content;
+        height: 30px;
+        border: black 1px solid;
+        line-height: 30px;
+        padding: 0 10px;
+        border-radius: 3px;
+      }
+      .car:hover {
+        color: white;
+        background-color: rgb(250, 155, 171);
+        border: 1px solid rgb(250, 155, 171);
+      }
+      .cupcake{
+        background: linear-gradient(yellow);
+        width: 100%;
+        height: 800px;
+        margin-bottom: 10%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./8-img/cupcake.jpeg);
+        background-size: cover;
+        font-size: 50px;
+      }
+      .cupcake::before{
+        content: 'Welcome to Grandmas Home';
+        margin:50% 21%;
+        font-family: 'Comic Sans MS';
+        color: rgb(240, 129, 147);
+        font-weight: 500;
+        filter: drop-shadow(2px 2px 4px black);
+      }
+      .banner {
+        width: 100%;
+        height: 800px;
+        background-color: rgba(248, 234, 110, 0.26);
+        position: absolute;
+        left: -3px;
+        top: 2.7%;
+      }
+      .aboutus {
+        flex-direction: column;
+      }
+      .aboutus p {
+        width: 300px;
+        margin-top: 20px;
+      }
+      .content {
+        margin-top:5px;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+      }
+      .content img {
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+      }
+      .explore {
+        margin-top: 20px;
+        width: fit-content;
+        height: fit-content;
+        padding: 10px 10px;
+        border: black solid 1px;
+        border-radius: 10px;
+      }
+      .explore:hover {
+        background-color: black;
+        border: black solid 1px;
+        color: rgb(243, 147, 163);
+        transition-duration: 0.5s;
+      }
+      footer {
+        background-color: rgb(233, 232, 232);
+        margin-top: 80px;
+        width: 100%;
+      }
+      footer h1 {
+        width: fit-content;
+        padding: 50px 40%;
+      }
+      .buttons {
+        display: flex;
+        width: 500px;
+        margin: 0 auto;
+        justify-content: space-evenly;
+      }
+      .button {
+        border: 1px solid black;
+        border-radius: 3px;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 5px;
+        cursor: pointer;
+      }
+      .button:hover {
+        border: 1px solid rgb(247, 158, 173);
+        color: rgb(83, 215, 248);
+        background-color: black;
+      }
+      .input {
+        width: 300px;
+        height: 40px;
+        margin: 20px calc((100% - 300px) / 2);
+        border-radius: 3px;
+      }
+      .input:focus {
+        border: 4px solid rgb(83, 215, 248);
+      }
+      .card {
+        width: 240px;
+        height: 252px;
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+      }
+      .card:hover img {
+        width: 110%;
+        height: 110%;
+        transition-duration: 2s;
+      }
+      .card .picture {
+        width: 100%;
+        height: 65%;
+        overflow: hidden;
+        position: relative;
+      }
+      .cards {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      .black {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.171);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      .card:hover .black {
+        display: block;
+        transition-duration: 2s;
+      }
+      .none {
+        display: none;
+      }
+      .bigtoast {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.705);
+        position: absolute;
+        position: relative;
+        left: 3px;
+        top: 3px;
+      }
+      .smalltoast {
+        width: 500px;
+        height: 400px;
+        border-radius: 5px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .modal {
+        background-color: rgba(0, 0, 0, 0.486);
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        z-index: 209; /* Sit on top */
+        position: fixed; /*Stay in place*/
+        overflow: auto; /* Enable scroll if needed */
+        /* display: none; */
+      }
+      .modal-content {
+        width: 600px;
+        height: 400px;
+        margin: 15% auto; /* 15% from the top and centered */
+        background-color: aliceblue;
+        position: relative;
+      }
+      .modal-content img {
+        width: 600px;
+        height: 100%;
+      }
+      .close {
+        z-index: 500;
+        color: black;
+        position: absolute;
+        left: 91%;
+        top: 1%;
+        font-size: 40px;
+        cursor: pointer;
+        color: rgb(255, 79, 176);
+      }
+      .slide-left {
+        position: absolute;
+        left: 3%;
+        top: 58%;
+        font-weight: 900;
+        font-size: 40px;
+        color: aliceblue;
+        cursor: pointer;
+      }
+      .slide-right {
+        position: absolute;
+        left: 92%;
+        top: 58%;
+        font-weight: 900;
+        font-size: 40px;
+        z-index: 30;
+        color: aliceblue;
+        cursor: pointer;
+      }
+      .slide-left:hover,
+      .slide-right:hover {
+        color: rgb(63, 213, 250);
+      }
+      .slide-left:focus,
+      .slide-right:focus {
+        border: rgb(8, 170, 245) solid 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="modal">
+      <div class="modal-content">
+        <img src="./8-img/12/cake-1.jpeg" alt="" data-id="1" />
+        <img src="./8-img/12/cake-2.jpeg" alt="" data-id="2" />
+        <img src="./8-img/12/cake-3.jpeg" alt="" data-id="3" />
+        <img src="./8-img/12/cupcake-1.jpeg" alt="" data-id="4" />
+        <img src="./8-img/12/cupcake-2.jpeg" alt="" data-id="5" />
+        <img src="./8-img/12/cupcake-3.jpeg" alt="" data-id="6" />
+        <img src="./8-img/12/doughnut-1.jpeg" alt="" data-id="7" />
+        <img src="./8-img/12/doughnut-2.jpeg" alt="" data-id="8" />
+        <img src="./8-img/12/doughnut-3.jpeg" alt="" data-id="9" />
+        <img src="./8-img/12/sweets-1 (1).jpeg" alt="" data-id="10" />
+        <img src="./8-img/12/sweets-2 (1).jpeg" alt="" data-id="11" />
+        <img src="./8-img/12/sweets-3.jpeg" alt="" data-id="12" />
+        <span class="close">x</span>
+        <div class="slide-left">◀</div>
+        <div class="slide-right">▶</div>
+      </div>
+    </div> -->
+    <nav>
+      <div class="donught"><img src="./8-img/donught logo.svg" alt="" /></div>
+      <div class="function">
+        <div class="home">Home</div>
+        <div class="about">About</div>
+        <div class="store">Store</div>
+      </div>
+      <div class="phone">
+        <img src="./8-img/phone.png" alt="" />
+        <p>+ 123 456 789</p>
+      </div>
+      <div class="car">
+        <img src="./8-img/chart切.png" alt="" />
+        <p>2 Items -$10.49</p>
+      </div>
+    </nav>
+    <main>
+      <div class="cupcake">
+        <div class="banner"></div>
+      </div>
+    </main>
+    <div class="content">
+      <div class="aboutus">
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+          aliquam voluptas beatae vitae expedita consectetur nesciunt quia
+          deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro
+          at dolorum! Ad!
+        </p>
+        <div class="explore">EXPLORE</div>
+      </div>
+      <img src="./8-img/sweets-1.jpeg" alt="" />
+    </div>
+    <footer>
+      <h1>our store</h1>
+      <div class="buttons">
+        <div class="button b1" data-id="all">ALL</div>
+        <div class="button b2" data-id="cake">CAKES</div>
+        <div class="button b3" data-id="cupcake">CUPCAKES</div>
+        <div class="button b4" data-id="sweet">SWEETS</div>
+        <div class="button b5" data-id="donught">DONUGHTS</div>
+      </div>
+      <input type="search" placeholder="   item..." class="input" />
+      <div class="cards">
+        <div class="card" data-id="cake">
+          <div class="picture">
+            <img src="./8-img/12/cake-1.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          cake item$5
+        </div>
+        <div class="card" data-id="cake">
+          <div class="picture">
+            <img src="./8-img/12/cake-2.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          cake item$5
+        </div>
+        <div class="card" data-id="cake">
+          <div class="picture">
+            <img src="./8-img/12/cake-3.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          cake item$5
+        </div>
+        <div class="card" data-id="cupcake">
+          <div class="picture">
+            <img src="./8-img/12/cupcake-1.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          cupcakeitem$5
+        </div>
+        <div class="card" data-id="cupcake">
+          <div class="picture">
+            <img src="./8-img/12/cupcake-2.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          cupcake item$5
+        </div>
+        <div class="card" data-id="cupcake">
+          <div class="picture">
+            <img src="./8-img/12/cupcake-3.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          cupcake item$5
+        </div>
+        <div class="card" data-id="donught">
+          <div class="picture">
+            <img src="./8-img/12/doughnut-1.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          donught item$5
+        </div>
+
+        <div class="card" data-id="donught">
+          <div class="picture">
+            <img src="./8-img/12/doughnut-2.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          donught item$5
+        </div>
+        <div class="card" data-id="donught">
+          <div class="picture">
+            <img src="./8-img/12/doughnut-3.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          donught item$5
+        </div>
+        <div class="card" data-id="sweet">
+          <div class="picture">
+            <img src="./8-img/12/sweets-1 (1).jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          sweet item$5
+        </div>
+        <div class="card" data-id="sweet">
+          <div class="picture">
+            <img src="./8-img/12/sweets-3.jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          sweet item$5
+        </div>
+        <div class="card" data-id="sweet">
+          <div class="picture">
+            <img src="./8-img/12/sweets-2 (1).jpeg" alt="" />
+            <div class="black"></div>
+          </div>
+          sweet item$5
+        </div>
+      </div>
+    </footer>
+    <script>
+      var cards = document.querySelectorAll(".card");
+      var btns = document.querySelectorAll(".button");
+      btns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var dataID = this.getAttribute("data-id");
+          if (dataID != "all") {
+            var cards = document.querySelectorAll(".card");
+            cards.forEach(function (card) {
+              card.classList.add("none");
+            });
+            var ids = document.querySelectorAll(`.cards [data-id=${dataID}]`);
+            ids.forEach(function (id) {
+              id.classList.remove("none");
+            });
+          } else {
+            var cards = document.querySelectorAll(".card");
+            cards.forEach(function (card) {
+              card.classList.remove("none");
+            });
+          }
+        });
+      });
+
+      var modal = document.querySelector(".modal");
+      var span = document.querySelector(".close");
+      var body = document.querySelector("body");
+      var cards = document.querySelectorAll(".card");
+      var darken = document.querySelector(".darken");
+      cards.forEach(function (card) {
+        card.addEventListener("click", function () {
+          modal.style.display = "block";
+          modal.innerHTML = `<div class="slide">
+                <div class="img12">
+                  <div class="modal-content">
+        <img src="./8-img/12/cake-1.jpeg" alt="" data-id="1" />
+        <img src="./8-img/12/cake-2.jpeg" alt="" data-id="2" />
+        <img src="./8-img/12/cake-3.jpeg" alt="" data-id="3" />
+        <img src="./8-img/12/cupcake-1.jpeg" alt="" data-id="4" />
+        <img src="./8-img/12/cupcake-2.jpeg" alt="" data-id="5" />
+        <img src="./8-img/12/cupcake-3.jpeg" alt="" data-id="6" />
+        <img src="./8-img/12/doughnut-1.jpeg" alt="" data-id="7" />
+        <img src="./8-img/12/doughnut-2.jpeg" alt="" data-id="8" />
+        <img src="./8-img/12/doughnut-3.jpeg" alt="" data-id="9" />
+        <img src="./8-img/12/sweets-1 (1).jpeg" alt="" data-id="10" />
+        <img src="./8-img/12/sweets-2 (1).jpeg" alt="" data-id="11" />
+        <img src="./8-img/12/sweets-3.jpeg" alt="" data-id="12" />
+        <span class="close">x</span>
+        <div class="slide-left">◀</div>
+        <div class="slide-right">▶</div>
+      </div>
+                </div>
+            </div>`;
+        });
+      });
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      // When the user clicks anywhere outside of the modal, close it，window要另外寫if，不然點到card modal跑不出來
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      //slide//
+      // var dessertID=this.getAttribute('data-id')
+      var slideimgs = document.querySelectorAll(".modal-content img");
+      var leftbtn = document.querySelector(".slide-left");
+      var rightbtn = document.querySelector(".slide-right");
+      var current = 0;
+      function reset() {
+        for (var i = 0; i < slideimgs.length; i++) {
+          slideimgs[i].style.display = "none";
+        }
+      }
+      function start() {
+        reset();
+        slideimgs[0].style.display = "block";
+      }
+      function left() {
+        reset();
+        slideimgs[current - 1].style.display = "block";
+        current--;
+      }
+      function right() {
+        reset();
+        slideimgs[current + 1].style.display = "block";
+        current++;
+      }
+      leftbtn.onclick = function () {
+        // var dessertID = this.getAttribute("data-id");
+        // var current = document.querySelectorAll(`data-id=${dessertID}`);
+
+        if (current == 0) {
+          current = slideimgs.length;
+        }
+        left();
+        console.log(slideimgs);
+      };
+      rightbtn.onclick = function () {
+        // var dessertID = this.getAttribute("data-id");
+        // var current=document.querySelectorAll(`data-id=${dessertID}`);
+        if (current == slideimgs.length - 1);
+        current = -1;
+        right();
+      };
+      start();
+    </script>
+  </body>
+</html>
