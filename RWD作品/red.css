@@ -7,13 +7,26 @@ body{
     background-color: antiquewhite;
     display: flex;
 }
+main{ 
+    width: 200px;
+    height: 200px;
+    background-image: url(./image/貓.gif);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:60%;
+    left: 20%;
+    filter: drop-shadow(2px 2px 2px rgb(95, 95, 95));
+    /* background-color:aqua; */
+  } 
 nav{
     background-color: aqua;
     width: 20%;
     height: 100vh;
     background-image: url(./image/dog.png);
     background-size: cover;
-    background-position: right 35% bottom 55%;;
+    background-position: right 35% bottom 55%;
+    
     
 }
 .ava{
@@ -45,6 +58,7 @@ button{
 .container{
     width: 80%;
     height: 100vh;
+    position: relative;
 }
 .banner{
     margin: 6% auto;
@@ -160,8 +174,8 @@ button{
         height: 32%;
         background-color: brown;
     }
-    /* .a3{
-        height: 35%;
-    } */
+    main{
+        display: none;
+    }
    
 }
