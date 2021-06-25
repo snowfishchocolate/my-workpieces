@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./red.css">
+    <!-- //animate.css/// -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <nav>
         <div class="ava"></div>
-        <!-- <section class="btns">
+        <section class="btns">
             <button></button>
             <button></button>
             <button></button>
-        </section> -->
+        </section>
     </nav>
     <section class="container">
         <section  class="banner">
             <div class="main a1"></div>
                 <div class="main a2"></div>
                 <div class="main a3"></div>
-        </section>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+        $('button').click(
+          function() {$('button').addClass('animate__animated animate__bounceIn animate__infinite	infinite');},)
+    </script>
 </body>
 </html>

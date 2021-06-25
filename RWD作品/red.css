@@ -30,7 +30,7 @@ nav{
     width: 150px;
     height: 200px;
     margin: 25% auto;
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
