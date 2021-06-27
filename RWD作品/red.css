@@ -42,7 +42,7 @@ nav{
 .btns{
     width: 150px;
     height: 200px;
-    margin: 25% auto;
+    margin: 25% 38%;
     /* background-color: darkcyan; */
     display: flex;
     flex-direction: column;
@@ -54,6 +54,7 @@ button{
     height: 50px;
     background-color: darkmagenta;
     margin: 0 auto;
+    color: white;
 }
 .container{
     width: 80%;
@@ -157,7 +158,10 @@ button{
         margin: 0 auto;
     }
     .btns{
+        /* display: flex;
+        width: 450px; */
         display: none;
+        
     }
     .banner{
         display: flex;
