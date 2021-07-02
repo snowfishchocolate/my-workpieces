@@ -1,0 +1,475 @@
+@media (max-width: 759px) {
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: 'Segoe UI',SegoeUI,'Microsoft JhengHei',微軟正黑體,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(29, 29, 29);
+}
+.dropdown{
+    display: none;
+}
+#two{
+    display: none;
+    width: 168px;
+    height: 106px;
+    position: absolute;
+    left: 40%;
+    top:11%;
+    z-index: 500;
+    border-bottom: 2px black solid;
+    background-color: #f2f2f2;
+}
+#two ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 10%;
+}
+.hamburger{
+    width: 100%;
+    height: 800px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top:13%;
+    z-index: 60;
+    display: none;
+}
+.hamburger ul{
+    width: 100%;
+    height: 100%;
+    margin-left: 15px;
+    list-style: none;
+    position: relative;
+   
+}
+.hamburger ul li{
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid rgba(150, 149, 149, 0.109);
+    line-height: 54px;
+}
+.hamburger ul div:focus{
+    width: 95%;
+    height: 49px;
+    margin: 0 auto;
+    outline: 2px dotted rgb(63, 63, 63);
+    line-height: 49px;
+    padding: 0 10px; 
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 49px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 49px;
+    overflow: hidden;
+    position: relative;
+}
+header a{
+    width: 108px;
+    height: 100%;
+    background-image: url(./image/logo.png);
+    background-size: 99%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.title{
+    width: 54%;
+    height: 100%;
+    display: none;
+}
+nav{
+    width: 90%;
+    height: 5%;
+    display: flex;
+    position: relative;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 11px;
+}
+nav ul li {
+    height: 37px;
+    list-style: none;
+    font-size: 8px;
+    cursor: pointer;
+}
+nav ul li:hover{
+    border-bottom: black 2px solid;
+}
+.box,.help{
+    display: none;
+}
+.more{
+    font-size: 13px;
+}
+.action{
+    width: 15%;
+    height: 100%;
+    font-size: 13px;
+    display: flex;
+}
+header span{
+    width: 150px;
+    height: 80px;
+    position:absolute;
+    top:50%;
+    left: 1%;
+    transform: translateY(-50%);
+}
+header span .img-1{
+    width: 80px;
+    height: 80px;
+    background-image: url(./image/hambirger.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+header span p{
+    width: 80px;
+    height: 80px;
+    background-image: url(./image/magnifier.png);
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left:30%; 
+    transform: translateY(-50%);
+}
+header span .img-2{
+    width: 80px;
+    height: 80px;
+    background-image: url(./image/close.png);
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display:none;
+}
+.action{
+    width: 200px;
+    display: flex; 
+    justify-content: space-between;
+}
+.action button{
+    border: none;
+}
+.action button .img{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.action button p{
+    font-size: 0;
+}
+.search .img{
+    background-image: url(./image/magnifier.png);
+    display: none;
+}
+.shoppingcart .img{
+    background-image: url(./image/shopping-cart.png);
+}
+.login .img{
+    background-image: url(./image/user.png);
+}
+/* ************************************************ */
+.slide{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #e6e6e6;
+    overflow: hidden;
+    background-image: none;
+}
+.slide .img{
+    width: 100%;
+    height: 300px;
+    background-image: url(./image/1080藍波.png);
+    background-size: 100%;
+    background-position: right;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+}
+.slide text{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:7%;
+    transform: translateY(-50%);
+}
+.slide p{
+    font-size: 13px;
+}
+.slide button{
+    width: 123px;
+    height: 39px;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border: none;
+}
+/* ************************************ */
+
+.bigicon .img{
+    background-image: url(./image/large-icon.png);
+}
+.lazyload .img{
+    background-image: url(./image/lazyload.webp);
+}
+.oblique .img{
+    background-image: url(./image/oblique.webp);
+}
+/* ************************************************** */
+.surface{
+    width: 90%;
+    height: 800px;
+    margin:  auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+.surfacelaptop,.microsoft365,.team,.xbox{
+    width: 320px;
+    height: 360px; 
+}
+.surface .img{
+    width: 100%;
+    height: 300px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.surfacelaptop .img{
+    background-image: url(./image/494打開展示.webp);
+}
+.microsoft365 .img{
+    background-image: url(./image/494應用程式.webp);
+}
+.team .img{
+    background-image: url(./image/生日派對.webp);
+}
+.xbox .img{
+    background-image: url(./image/標誌.webp);
+}
+.surface a,.surface p{
+    font-size: 13px;
+}
+.surface a{
+    color: #0067b8;
+    text-decoration: none;
+    font-weight: 600;
+}
+.surface a:hover{
+    text-decoration:underline 2px ;
+    color: #0067b8;
+}
+/* *********************************** */
+.laptops{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #e6e6e6;
+    overflow: hidden;
+    background-image: none;
+}
+.laptops .img{
+    width: 100%;
+    height: 300px;
+    background-image: url(./image/1080藍波.png);
+    background-size: 100%;
+    background-position: right;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    background-image: url(./image/1080\ 2laptops.png);
+}
+.laptops text{
+    /* width: 200px; */
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:7%;
+    transform: translateY(-50%);
+}
+.laptops p{
+    width: 300px;
+    font-size: 13px;
+    text-align: center;
+}
+.laptops button{
+    width: 123px;
+    height: 39px;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border: none;
+}
+/* ********************************************** */
+.business{
+    width: 90%;
+    height: 850px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-wrap: wrap;
+}
+.business h2{
+    position: absolute;
+    top:6%;
+ }
+.businesssurface,.microbusiness,.windowsbusiness,.digitalcube{
+    width: 320px;
+    height: 360px; 
+}
+.windowsbusiness,.digitalcube{
+    margin-top: -150px;
+}
+.business .img{
+    width: 100%;
+    height: 300px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.businesssurface .img{
+    background-image: url(./image/螢幕+筆電.webp);
+}
+.microbusiness .img{
+    background-image: url(./image/螢幕.webp);
+}
+.windowsbusiness .img{
+    background-image: url(./image/企業版.webp);
+}
+.digitalcube .img{
+    background-image: url(./image/數位方塊.webp);
+}
+.business a,.business p{
+    font-size: 13px;
+}
+.business a{
+    color: #0067b8;
+    text-decoration: none;
+    font-weight: 600;
+}
+.business a:hover{
+    text-decoration:underline 2px ;
+    color: #0067b8;
+}
+/* ****************************************** */
+.icon{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+.fb{
+    width: 20px;
+    height: 20px;
+    background-image: url(./image/fb.GIF);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.youtube{
+    width: 20px;
+    height: 20px;
+    background-image: url(./image/youtube.GIF);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.icon p{
+    font-size: 13px;
+}
+/* ********************************************** */
+footer{
+    width: 100%;
+    height: 550px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+section,.bottom{
+    width: 90%;
+    margin: 0 auto;
+}
+footer section{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+footer section ul{
+    width: 200px;
+    height: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 50px;
+}
+footer section ul li{
+    font-size: 11px;
+    cursor: pointer;
+}
+footer section ul li:hover{
+    text-decoration: underline rgb(29, 29, 29);
+}
+footer section ul p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom ul{
+    width: 500px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.bottom p{
+    font-size: 11px;
+    cursor: pointer;
+}
+.bottom ul li:hover,.bottom p:hover{
+    text-decoration: underline rgb(29, 29, 29);
+}
+}

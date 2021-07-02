@@ -1,0 +1,402 @@
+@media (max-width: 1195px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding:0;
+    }
+    body{
+        font-family: 'Segoe UI',SegoeUI,'Microsoft JhengHei',微軟正黑體,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: rgb(29, 29, 29);
+    }
+    .dropdown{
+        display: none;
+    }
+    #two{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .more{
+        font-size: 0;
+    }
+    header{
+        width: 90%;
+        height: 49px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        line-height: 49px;
+        overflow: hidden;
+    }
+    header a{
+        width: 10%;
+        height: 100%;
+        background-image: url(./image/logo.png);
+        background-size: 99%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .title{
+        width: 54%;
+        height: 100%;
+    }
+    nav{
+        width: 55%;
+        height: 5%;
+        display: flex;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav ul li {
+        height: 37px;
+        list-style: none;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    nav ul li:hover{
+        border-bottom: black 2px solid;
+    }
+    .action{
+        width: 15%;
+        height: 100%;
+        font-size: 13px;
+        display: flex;
+    }
+    header span{
+        width: 200px;
+        height: 37px;
+        font-size: 13px;
+        margin-right: -8%;
+        display: flex;
+    }
+    header span p{
+        width: fit-content;
+    }
+    header span p:hover{
+        border-bottom: black 2px solid;
+    }
+    .action{
+        width: 150px;
+    }
+    .action button{
+        border: none;
+        background-color:white;
+        display: flex; 
+        align-items: center;
+    }
+    .action button .img{
+        width: 25px;
+        height: 25px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .login p{
+        font-size: 0;
+    }
+    .search p,.shoppingcart p{
+        font-size: 0;
+    }
+    .search .img{
+        background-image: url(./image/magnifier.png);
+    }
+    .shoppingcart .img{
+        background-image: url(./image/shopping-cart.png);
+    }
+    .login .img{
+        background-image: url(./image/user.png);
+    }
+    /* ************************************************ */
+    .slide{
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        background-image: url(./image/1600藍波.png);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+    .slide text{
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        top:50%;
+        left:7%;
+        transform: translateY(-50%);
+    
+    }
+    .slide p{
+        font-size: 13px;
+    }
+    .slide button{
+        width: 123px;
+        height: 39px;
+        font-size: 15px;
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        border: none;
+    }
+    /* ************************************ */
+    .itemtype{
+        width: 90%;
+        height: 200px;
+        margin: auto;
+        overflow: hidden;
+
+    }
+    .agroup{
+        width: 552px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .itemtype a{
+       text-decoration: none;
+       color: black;
+    }
+    .itemtype a:hover{
+        text-decoration: underline;
+    }
+    .itemtype a .img{
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    .bigicon .img{
+        background-image: url(./image/large-icon.png);
+    }
+    .lazyload .img{
+        background-image: url(./image/lazyload.webp);
+    }
+    .oblique .img{
+        background-image: url(./image/oblique.webp);
+    }
+    /* ************************************************** */
+    .surface{
+        width: 90%;
+        height: 415px;
+        margin: 0 auto;
+        margin-top: -80px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+    .surfacelaptop,.microsoft365,.team,.xbox{
+        width: 249px;
+        height: 220px; 
+    }
+    .surface .img{
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .surfacelaptop .img{
+        background-image: url(./image/打開展示.webp);
+    }
+    .microsoft365 .img{
+        background-image: url(./image/應用程式.webp);
+    }
+    .team .img{
+        background-image: url(./image/生日派對.webp);
+    }
+    .xbox .img{
+        background-image: url(./image/標誌.webp);
+    }
+    .surface a,.surface p{
+        font-size: 13px;
+    }
+    .surface a{
+        color: #0067b8;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .surface a:hover{
+        text-decoration:underline 2px ;
+        color: #0067b8;
+    }
+    /* *********************************** */
+    .laptops{
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        background-image: url(./image/1600px\ 2laptop.png);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+    .laptops text{
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        top:50%;
+        left:7%;
+        transform: translateY(-50%);
+    }
+    .laptops p{
+        font-size: 13px;
+    }
+    .laptops button{
+        width: 123px;
+        height: 39px;
+        font-size: 15px;
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        border: none;
+    }
+    /* ********************************************** */
+    .business{
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .business h2{
+        position: absolute;
+        top:5%;
+     }
+    .businesssurface,.microbusiness,.windowsbusiness,.digitalcube{
+        width: 249px;
+        height: 200px; 
+    }
+    .business .img{
+        margin-top: -40%;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .businesssurface .img{
+        background-image: url(./image/螢幕+筆電.webp);
+    }
+    .microbusiness .img{
+        background-image: url(./image/螢幕.webp);
+    }
+    .windowsbusiness .img{
+        background-image: url(./image/企業版.webp);
+    }
+    .digitalcube .img{
+        background-image: url(./image/數位方塊.webp);
+    }
+    .business a,.business p{
+        font-size: 13px;
+    }
+    .business a{
+        color: #0067b8;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .business a:hover{
+        text-decoration:underline 2px ;
+        color: #0067b8;
+    }
+    /* ****************************************** */
+    .icon{
+        width: 180px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5%;
+    }
+    .fb{
+        width: 20px;
+        height: 20px;
+        background-image: url(./image/fb.GIF);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+    .youtube{
+        width: 20px;
+        height: 20px;
+        background-image: url(./image/youtube.GIF);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+    .icon p{
+        font-size: 13px;
+    }
+    /* ************************************************* */
+    footer{
+        width: 100%;
+        height: 350px;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    section,.bottom{
+        width: 90%;
+        margin: 0 auto;
+    }
+    footer section{
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 100px;
+    }
+    footer section ul{
+        width: 243px;
+        height: 200px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    footer section ul li{
+        font-size: 11px;
+        cursor: pointer;
+    }
+    footer section ul li:hover{
+        text-decoration: underline rgb(29, 29, 29);
+    }
+    footer section ul p{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+    .bottom ul{
+        width: 500px;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        font-size: 13px;
+        margin-bottom: 20px;
+        font-size: 11px;
+        cursor: pointer;
+    }
+    .bottom p{
+        font-size: 11px;
+        cursor: pointer;
+    }
+    .bottom ul li:hover,.bottom p:hover{
+        text-decoration: underline rgb(29, 29, 29);
+    }
+    }
