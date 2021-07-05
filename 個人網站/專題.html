@@ -22,7 +22,14 @@
     </script>
     <!-- ///專題css////// -->
       <link rel="stylesheet" href="./專題.css">
+      <link rel="stylesheet" href="./專題1400.css">
       <link rel="stylesheet" href="./專題1200.css">
+      <link rel="stylesheet" href="./專題992.css">
+      <link rel="stylesheet" href="./專題855.css">
+      <link rel="stylesheet" href="./專題800.css">
+      <link rel="stylesheet" href="./專題768.css">
+      <link rel="stylesheet" href="./專題689.css">
+      <link rel="stylesheet" href="./專題576.css">
   </head>
   
   <body>
@@ -139,27 +146,47 @@
     </div>
   </div>
 
+  <div id="side-button">
+    <p>◀</p>
+  </div>
+  <section id="side-menu">
+    <ul>
+      <li><a href="#story">銀牛故事</a></li>
+      <li><a href="#news">最新消息</a></li>
+      <li><a href="#menu">真膳美饌</a></li>
+      <li><a href="#gallery">美食畫廊</a></li>
+      <li><a href="#contact">聯絡我們</a></li>
+    </ul>
+  </section>
 
-    
+  <ul class="hamburger-ul">
+    <li class="nav-story"><a href="#story">銀牛故事</a></li>
+    <li class="discount"><a href="#news">最新消息</a></li>
+    <li class="food"><a href="#menu">真膳美饌</a></li>
+    <li class="site"><a href="#gallery">美食畫廊</a></li>
+    <li class="site"><a href="#contact">聯絡我們</a></li>
+  </ul>
     
     <section class="banner">
       <div class="container">
-        <nav>
-          <div class="item">
-            <div class="logo"></div>
-            <ul>
-              <li class="nav-story"><a href="#story">銀牛故事</a></li>
-              <li class="discount"><a href="#news">最新消息</a></li>
-              <li class="food"><a href="#menu">真膳美饌</a></li>
-              <li class="site"><a href="#gallery">美食畫廊</a></li>
-              <li class="site"><a href="#contact">聯絡我們</a></li>
-            </ul>
-            <div class="eatout">
-              <div class="panda"></div>
-              <div class="uber"></div>
-            </div>
-          </div>
-        </nav>
+            <nav>
+              <div class="item">
+                <div class="hamburger"></div>
+                <div class="cross"></div>
+                <div class="logo"></div>
+                <ul>
+                  <li class="nav-story"><a href="#story">銀牛故事</a></li>
+                  <li class="discount"><a href="#news">最新消息</a></li>
+                  <li class="food"><a href="#menu">真膳美饌</a></li>
+                  <li class="site"><a href="#gallery">美食畫廊</a></li>
+                  <li class="site"><a href="#contact">聯絡我們</a></li>
+                </ul>
+                <div class="eatout">
+                  <div class="panda"></div>
+                  <div class="uber"></div>
+                </div>
+              </div>
+            </nav>
         <div class="text">
           <h2>來一客</h2>
           <p>你絕對沒嚐過的鮮嫩咬勁 !</p>
@@ -334,6 +361,50 @@
         lastScrollY = a;
       
       });
+      //////////////////////hamburger/////////////
+      var hamburgerBtn=document.querySelector('.hamburger');
+      var crossBtn=document.querySelector('.cross');
+      var hamburgerDrop=document.querySelector('.hamburger-ul');
+        hamburgerBtn.addEventListener('click',function(){
+            hamhide();
+        })
+        function hamhide(){
+            if (hamburgerDrop.style.display =="block")
+            {
+                hamburgerDrop.style.display = "none";
+            }else {
+                hamburgerDrop.style.display = "block";
+                hamburgerBtn.style.display='none';
+                crossBtn.style.display='block';
+            }
+        }
+        crossBtn.addEventListener('click',function(){
+            closehide();
+        })
+        function closehide(){
+            if (hamburgerDrop.style.display =="none")
+            {
+                hamburgerDrop.style.display = "block";
+            }else {
+                hamburgerDrop.style.display = "none";
+                crossBtn.style.display='none';
+                hamburgerBtn.style.display='block';
+            }
+        }
+      ////////////side-menu////////////
+      var sideBtn=document.querySelector('#side-button');
+      var sideMenu=document.querySelector('#side-menu');
+      sideBtn.addEventListener('click',function(){
+            hide();
+      })
+      function hide(){
+            if (sideMenu.style.display =="block")
+            {
+                sideMenu.style.display = "none";
+            }else {
+              sideMenu.style.display = "block";
+            }
+        }
 
       //////////首頁news///////////////
       var contents = [
