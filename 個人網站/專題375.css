@@ -1,15 +1,18 @@
 
-@media(max-width:690px){
+@media(max-width:376px){
   .logo{
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
-    /* background-color: yellow; */
     position: absolute;
-    left: 50%;
+    left: 40%;
+    top: 50%;
     transform: translateX(-50%);
+    transform: translateY(-50%);
   }
   nav {
     width: 100%;
-    height: 100px;
+    height: 50px;
     left: 0px;
     top: 0px;
     position:fixed;
@@ -19,6 +22,7 @@
     align-items: center;
   }
   .item{
+    height: 50px;
     font-size: 0px;
     margin: 0 auto;
     position: relative;
@@ -29,23 +33,23 @@
     background-size: 110%;
   }
   .hamburger{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 30px;
     background-image: url(./image/PNG/PNG/hamburger.png);
-    background-size: 90%;
+    background-size: 50%;
     background-repeat: no-repeat;
     position: absolute;
     top:50%;
     left: 10%;
-    transform: translateY(-25%);
+    transform: translateY(-50%);
     cursor: pointer;
   }
   .hamburger-ul{
     width: 200px;
     height: 250px;
     position: absolute;
-    left:60px;
-    top:80px;
+    left:30px;
+    top:60px;
     background-color: rgb(44, 46, 46);
     list-style: none;
     font-size: 20px;
@@ -60,10 +64,10 @@
     text-decoration: underline 5px solid white;
   }
   .cross{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 30px;
     background-image: url(./image/PNG/PNG/cross.png);
-    background-size: 90%;
+    background-size: 30%;
     background-repeat: no-repeat;
     position: absolute;
     top:50%;
@@ -71,48 +75,54 @@
     transform: translateY(-25%);
     display: none;
   }
+  .eatout{
+    position: absolute;
+    top:50%;
+    left: 80%;
+    transform: translateY(-50%);
+  }
   .banner {
     width: 100%;
     background-image: url(./image/roasted-pork切好.png);
-    height: 1000px;
+    height: 1200px;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
     position: absolute;
     left: 0px;
-    top: -49%;
+    top: -107%;
     z-index: -4;
     overflow: hidden;
   }
   .text {
     width: 460px;
     position: absolute;
-    left: 44%;
-    top: 38%;
+    left: 10%;
+    top: 54%;
     color: white;
   }
   .text h2 {
     font-family: "Sitka Small";
-    font-size: 40px;
+    font-size: 20px;
     margin: 0 auto;
   }
   .text p {
     font-family: "Sitka Small";
-    font-size: 20px;
+    font-size: 10px;
     margin: 0 auto;
   }
   .text button {
-    width: 250px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
     background-color: #fbc644;
     margin: 0 auto;
     border-radius: 15px;
-    font-size: 25px;
+    font-size: 15px;
   }
   .news {
     width: 100%;
-    height: 700px;
-    margin-top: 550px;
+    height: 600px;
+    margin-top: 250px;
     display: flex;
     justify-content: space-between;
   }
@@ -122,27 +132,27 @@
     line-height: 50px
   }
   .news .p1 {
-    width: 20%;
+    width: 0%;
     height: 95%;
     background-image: url(./image/freepik-tomato.png);
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: top 1% left 30px;
-    background-color: chocolate;
+    background-color: transparent;
     filter:drop-shadow(5px 5px 30px black);
   }
   .news .p2 {
-    width: 20%;
+    width: 0%;
     height: 95%;
     background-image: url(./image/freepik-mushroom-2.png);
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: top 50% left 1%;
-    background-color: cadetblue;
+    background-color: transparent;
     filter:drop-shadow(5px 5px 20px black);
   }
   .news .container {
-    width: 60%;
+    width: 100%;
     height: 95%;
     background-color: crimson;
     filter:drop-shadow(5px 5px 20px black);
@@ -189,25 +199,24 @@
   }
   .menu {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   .menu-1{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-size:90%;
     background-attachment: fixed;
-      background-image: url(./image/juicy-steak.jpg);
-      position: absolute;
+    background-image: url(./image/juicy-steak.jpg);
+    position: absolute;
   }
   .menu-2{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-size:cover;
     background-position: center;
     background-image: url(./image/原肉口感.PNG);
     position: absolute;
     background-repeat: no-repeat;
-    
   }
   .menu p {
     width: 80%;
@@ -219,9 +228,9 @@
     transform: translateX(-50%);
   }
   .menu-button {
-    width: 650px;
+    width: 550px;
     position: absolute;
-    top:17% ;
+    top:23% ;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -229,7 +238,7 @@
     justify-content: space-between;
   }
   .menu-button .button {
-    width: 120px;
+    width: 100px;
     height: 100px;
     background-color: white;
     box-shadow: 3px 3px 15px black;
@@ -242,18 +251,38 @@
   }
   .hand{
     position: absolute;
-    left: 0%;
-    top:30%;
+    left: 72%;
+    top:-9%;
+    background-size: 60%;
+  }
+  .menu-button {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top:11% ;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .menu-button .button {
+    width: 90px;
+    height: 90px;
+    margin-top: 30%;
+  }
+  .menu-button .chicken,.menu-button .seafood{
+    margin-top: 10px;
   }
   .slide{
-    margin-top: -400px;
+    margin-top: -550px;
   }
   .slide .container .content{
-    width: 500px;
+    width: 400px;
   }
   .slide-1{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-size:90%;
     background-position: right 35% bottom 35%;;
     background-attachment: fixed;
@@ -262,42 +291,40 @@
   }
   .slide-2{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-size:cover;
     background-position: center;
     background-image: url(./image/美食當前.PNG);
     position: absolute;
     background-repeat: no-repeat;
   }
-  .option-close{
-    position: absolute;
-    left: 75%;
-    top:15%;
+  .slide .container .content{
+    width: 300px;
   }
   .meal,.appetite{
-    width: 180px;
-    height: 180px;
-    margin-top: -20%;
+    width: 120px;
+    height: 120px;
+    margin-top: -85%;
   }
   .slide .hand{
     position: absolute;
-    left: 85%;
-    top: -40%;
+    left: 60%;
+    top: -73%;
   }
   .about{
-    margin-top: -250px;
+    margin-top: -156%;
   }
   .about-1{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-size:90%;
     background-attachment: fixed;
-     background-image: url(./image/時鐘牆.JPG);
-     position: absolute;
+    background-image: url(./image/時鐘牆.JPG);
+    position: absolute;
   }
   .about-2{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-size:cover;
     background-position: center;
     background-image: url(./image/銀牛故事.png);
@@ -305,29 +332,82 @@
     background-repeat: no-repeat;
   }
   .about .container {
-    height: 1200px;
+    height: 1145px;
   }
-  .about p {
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
+  .about .img,.about .mimg{
+    width: 150px;
+    height: 150px;
+  }
+  .about .front,.about .back,.about .mfront,.about .mback{
+    width: 150px;
+    height: 150px;
   }
   .about .container .content {
-    width: 650px;
-    height: 700px;
+    width: 300px;
+    height: 500px;
     background-color: white; 
     box-shadow: 3px 3px 15px black;
-    margin:53% auto;
+    margin:55% auto;
     display: flex;
   }
+  .accordion,.maccordion{
+    font-size: 13px;
+    color: orange;
+    padding: 1px 100px;
+    outline: orange 2px solid;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+  }
+  .place{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .milo{
+    position: absolute;
+    top:38%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .panel{
+    width: 211px;
+    height: fit-content;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    position:absolute;
+    left: -5px;
+    top:122%;
+}
+.mpanel{
+  width: 211px;
+  height: 500px;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  position:absolute;
+  left: 83px;
+  top:41%;
+  font-size: 20px;
+}
+  .about .container .content{
+    display: block;
+  }
   footer{
-    margin-top: -500px;
+    margin-top: -1100px;
+    height: 1200px;
   }
   .footer{
-    margin-top: 60%;
+    margin-top: 230%;
   }
   .footer,.icon,.word{
     width: 100%;
@@ -348,8 +428,9 @@
     height: 200px;
     background-image: url(./image/PNG/PNG/logo_4.png);
     background-size: 120%;
-    background-position: 85% 15%;
+    background-position: 205% 5%;
     background-repeat: no-repeat;
+    margin-left: -16%;
   }
   .open {
     color: white;
@@ -372,7 +453,7 @@
     background-color: rgba(222, 184, 135, 0);
   }
   .icon{
-    width: 400px;
+    width: 200px;
     background-size: cover;
     background-position: center;
     margin: 0 auto;
@@ -387,7 +468,21 @@
   .word{
     font-size: 10px;
   }
-      
-}
+  .option{
+    width: 600px;
+    height: 1000px;
+    margin: 130% auto; /* 15% from the top and centered */
+    position: relative;
+    left: 0;
+    top:0;
+    background-repeat: no-repeat;
+  }
+  .option-close{
+    position: absolute;
+    left: 75%;
+    top:20%;
+  }
+  }  
+
   
     

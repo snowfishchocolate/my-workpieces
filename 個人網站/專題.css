@@ -407,7 +407,6 @@
         width: 800px;
         height: 1000px;
         margin: 130% auto; /* 15% from the top and centered */
-        /* background-color: aliceblue; */
         position: relative;
         left: 0;
         top:0;
@@ -422,8 +421,8 @@
         line-height: 50px;
         border-radius: 50%;
         position: absolute;
-        left: 85%;
-        top: 55%;
+        left: 75%;
+        top:15%;
         cursor: pointer;
       }
       .option-close:hover{
@@ -581,12 +580,19 @@
         font-size: 40px;
         font-weight: 600;
         border-radius: 50%;
-        position: absolute;
-        left: 80%;
-        top:47%;
         background-color: rgb(194, 12, 12);
         cursor: pointer;
         z-index: 50;
+      }
+      .appetite-close{
+        position: absolute;
+        left: 50%;
+        top:23%;
+      }
+      .close{
+        position: absolute;
+        left: 50%;
+        top:23%;
       }
       .close:hover ,.appetite-close:hover{
         border: 2px solid orange;
