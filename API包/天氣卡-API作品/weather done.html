@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @charset "utf-8";
+            .st
+        {
+            font-family : Adobe 明體 Std;
+            font-size : 56px;
+            color : #231815;
+            color : rgb(35, 24, 21);
+        } */
+
+        html{
+            background-image: url(./milky-way-2750627_1920.jpg);
+        }
+        .section{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-around;
+        }
+       .card{
+           width: 400px;
+           height: 300px;
+           border-radius: 30px;
+           /* background: linear-gradient(to bottom right,#33ccff,#ccccff);  */
+           background: linear-gradient(to bottom right,#33ccff71,#ccccff8a);
+           position: relative;
+           margin-bottom: 30px;
+           animation: baloon 6s infinite;
+           animation-direction: alternate;
+       }
+
+       @keyframes baloon{
+           0% { transform:translateY(5px);}
+           50% {transform:translateY(20px);}
+           100% {transform:translateY(30px);}
+        }
+       .card:hover{
+        border: #F9F9F9 3px solid;
+       }
+       .card:hover .cardinner{
+           display: block;
+           
+       }
+       .cardinner{
+           /* display: none; */
+           font-size: larger;
+           font-family: "Microsoft YaHei";
+           font-weight: bold;
+           text-align: center;
+       }
+       .link {
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        font-size: 6em;
+        line-height: 1;
+        color: #604700;
+        display: inline-block;
+        }
+        .link--kukuri {
+            text-transform: uppercase;
+            font-weight: 900;
+            overflow: hidden;
+            line-height: 0.75;
+            color: #CCB38C;
+        }
+
+        .link--kukuri:hover {
+            color: #b2b0a9;
+        }
+
+        .link--kukuri::after {
+            content: '';
+            position: absolute;
+            height: 16px;
+            width: 100%;
+            top: 50%;
+            margin-top: -8px;
+            right: 0;
+            background: #F9F9F9;
+            transform: translate3d(-100%,0,0);
+            transition: transform 0.4s;
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        }
+
+        .link--kukuri:hover::after {
+            transform: translate3d(100%,0,0);
+        }
+
+        .link--kukuri::before {
+            content: attr(data-letters);
+            position: absolute;
+            z-index: 2;
+            overflow: hidden;
+            color: #424242;
+            white-space: nowrap;
+            width: 0%;
+            transition: width 0.4s 0.3s;
+        }
+
+        .link--kukuri:hover::before {
+            width: 100%;
+        }
+       .text{
+           position: absolute;
+           left: 50%;
+           top:70%;
+           transform: translateX(-50%);
+       }
+       .triangle1,.triangle2,.triangle3,.triangle4,.triangle5.triangle5,.triangle5{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 20px 20px;
+        border-color: transparent transparent rgb(255, 230, 0) transparent;
+       }
+       .circle{
+           width: 100px;
+           height: 100px;
+           border-radius: 50%;
+           background-color: orange;
+       }
+       .square{
+           width: 180px;
+           height: 50px;
+           border-radius: 40px;
+           background-color: peru;
+           position: relative;
+       }
+       .bigcircle{
+           width: 80px;
+           height: 80px;
+           border-radius: 50%;
+           background-color: peru;
+           position: absolute;
+           left:10%;
+           top:27%;
+       }
+       .smallcircle{
+        width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           background-color: peru;
+           position: absolute;
+           left:4%;
+           top:30%;
+       }
+      .picture1{
+          width: 100px;
+          height: 100px;
+          background-image: url(./sun.png);
+          background-size: cover;
+          margin:0 auto;
+      }
+      .picture2{
+          width: 100px;
+          height: 100px;
+          background-image: url(./rainnoo.png);
+          background-size: cover;
+          margin:0 auto;
+      }
+      .picture3{
+          width: 100px;
+          height: 100px;
+          background-image: url(./cloud-37010_1280.png);
+          background-size: 100%;
+          margin:0 auto;
+      }
+      .temperature, .pop{
+          font-size: 50px;
+          font-family: "Comic Sans MS";
+          text-align: center;
+          color: cornsilk;
+          font-weight: 800;
+      }
+      .date ,.wx{
+        font-size: 20px;
+        color: cornsilk;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 800;
+      }
+      .front {
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            background: linear-gradient(to bottom right,#33ccff3a,#ccccff3a);
+            position: relative;
+            margin-bottom: 30px;
+            backface-visibility: hidden;
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            }
+        .back {
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            background: linear-gradient(to bottom right,#33ccff3a,#ccccff3a);
+            position: relative;
+            margin-bottom: 30px;
+            backface-visibility: hidden;
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(-180deg);
+            }
+            .card:active .back {
+            transform: rotateY(0deg);
+            }
+            .card:active .front {
+            transform: rotateY(180deg);
+            }
+    
+       
+       
+    </style>
+</head>
+<body>
+<!-- 天氣圖案 -->
+<!-- <div class="sun">
+    <div class="circle"></div>
+    <div class="triangle1"></div>
+    <div class="triangle2"></div>
+    <div class="triangle3"></div>
+    <div class="triangle4"></div>
+    <div class="triangle5"></div>
+</div>
+<div class="bigcloud">
+    <div class="square"></div>
+    <div class="bigcircle"></div>
+    <div class="smallcircle"></div>
+</div> -->
+
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   -->
+    
+    <div class="section"></div>
+   
+       
+   
+                        
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-13A6095B-AC2E-4538-A657-E14BF3D31488&elementName=Wx,PoP,MaxT')
+       
+        .then(function(response){
+            return response.text();
+        })
+        .then(function(result){
+                    // document.write(result);
+                    // 字串轉成陣列可以用split 或是parse
+                    var data = JSON.parse(result);
+                    // console.log(data);
+                    var section = document.querySelector('.section');
+                    section.innerHTML = '';
+
+                    // data["records"]["location"][2]["weatherElement"][0]["time"].forEach(function(item,index){
+                    data["records"]["location"].forEach(function(data){
+                        var i =data["weatherElement"][0]["time"][0]["parameter"]["parameterName"];
+                        console.log(i);              
+                                if(i=='多雲時晴' || i=='晴時多雲'){
+                    section.innerHTML+= 
+                    `<div class="card">
+                            <div class="front">
+
+                                    <div class="cardinner"><a class="link link--kukuri" href="#" data-letters="${data["locationName"]}">${data["locationName"]}</a></div>
+
+                                    <div class="picture1"></div>
+
+                                    <div class="text">
+                                        <div class="date">${data["weatherElement"][0]["time"][0]["startTime"]}</div>
+                                        <div class="wx">${data["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                                    </div>
+                            </div>
+                            <div class="back">
+                                <div class="pop">降雨機率${data["weatherElement"][1]["time"][0]["parameter"]["parameterName"]}%
+                                </div>
+                                <div class="temperature">${data["weatherElement"][2]["time"][0]["parameter"]["parameterName"]}°C
+                                </div>
+                            </div>
+                        </div>
+                                `
+                }else if(i == '陰短暫雨' || i =='陰時多雲短暫雨' || i=='多雲時陰短暫雨' || i=='多雲短暫雨'|| i=='多雲午後短暫雷陣雨'){
+                    section.innerHTML+= 
+                    `<div class="card">
+                            <div class="front">
+
+                                    <div class="cardinner"><a class="link link--kukuri" href="#" data-letters="${data["locationName"]}">${data["locationName"]}</a></div>
+
+                                    <div class="picture2"></div>
+
+                                    <div class="text">
+                                        <div class="date">${data["weatherElement"][0]["time"][0]["startTime"]}</div>
+                                        <div class="wx">${data["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                                    </div>
+                            </div>
+                            <div class="back">
+                                <div class="pop">降雨機率${data["weatherElement"][1]["time"][0]["parameter"]["parameterName"]}%
+                                </div>
+                                <div class="temperature">${data["weatherElement"][2]["time"][0]["parameter"]["parameterName"]}°C
+                                </div>
+                            </div>
+                        </div>
+                                `
+                }else {
+                    section.innerHTML+= 
+                    `<div class="card">
+                            <div class="front">
+
+                                    <div class="cardinner"><a class="link link--kukuri" href="#" data-letters="${data["locationName"]}">${data["locationName"]}</a></div>
+
+                                    <div class="picture3"></div>
+
+                                    <div class="text">
+                                        <div class="date">${data["weatherElement"][0]["time"][0]["startTime"]}</div>
+                                        <div class="wx">${data["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                                    </div>
+                            </div>
+                            <div class="back">
+                                <div class="pop">降雨機率${data     ["weatherElement"][1]["time"][0]["parameter"]["parameterName"]}%
+                                </div>
+                                <div class="temperature">${data["weatherElement"][2]["time"][0]["parameter"]["parameterName"]}°C
+                                </div>
+                            </div>
+                        </div>
+                                `
+                }
+
+                                
+                    });
+
+
+// ***************有問題的部分，不知道為甚麼不能跑if迴圈，if迴圈在下面**********
+
+
+                // var i = data["records"]["location"][0]["weatherElement"][0]["time"][0]["parameter"]["parameterName"];
+                // if(i == '多雲時晴'){
+                //     console.log(i);
+                //     section.innerHTML+= 
+                //     `
+                //         <div class="card">
+                //             <div class="picture1"></div>
+                //             <div class="text">
+                //                 <div>${item["weatherElement"][0]["time"][0]["startTime"]}</div>
+                //                 <div>地點:${item["locationName"]}</div>
+                //                 <div>天氣概況:${item["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                //                 <div>溫度:</div>
+                //             </div>
+                //         </div>
+                //                 `
+                // }else if(i == '陰短暫雨' || i =='陰時多雲短暫雨' || i=='多雲時陰短暫雨' || i=='多雲短暫雨'){
+                //     section.innerHTML+= 
+                //     `
+                //         <div class="card">
+                //             <div class="picture2"></div>
+                //             <div class="text">
+                //                 <div>${item["weatherElement"][0]["time"][0]["startTime"]}</div>
+                //                 <div>地點:${item["locationName"]}</div>
+                //                 <div>天氣概況:${item["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                //                 <div>溫度:</div>
+                //             </div>
+                //         </div>
+                //                 `
+                // }else if(i=='多雲'){
+                //     `
+                //         <div class="card">
+                //             <div class="picture3"></div>
+                //             <div class="text">
+                //                 <div>${item["weatherElement"][0]["time"][0]["startTime"]}</div>
+                //                 <div>地點:${item["locationName"]}</div>
+                //                 <div>天氣概況:${item["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                //                 <div>溫度:</div>
+                //             </div>
+                //         </div>
+                //                 `
+                // }
+
+                });
+
+
+                
+                
+    </script>
+</body>
+</html>
