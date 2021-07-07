@@ -22,6 +22,10 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <!-- //////////////////////////sweet alert///////////// 
+    -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   </head>
   <style>
     h1 {
@@ -138,5 +142,12 @@
           });
         });
     </script>
+    <body onload="CheckAlert()">
+      <script>
+      function CheckAlert() {
+          // alert("Page is loaded.");
+          swal("不好意思!", "此API有限制只能用local host打開。所以直接點及檔案打不開，請使用VScode，麻煩了", "info");
+      }
+      </script>
   </body>
 </html>
