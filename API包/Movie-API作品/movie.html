@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        h1{
+          color: white;
+          display: flex;
+          width: 400px;
+          height: 80px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .col{
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        img{
+          width: 100px;
+          height: 100px;
+        }
+        .card{
+          width: 300px;
+          height: 350px;
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          margin-top: 120px;
+        }
+        .card-title{
+          width: 220px;
+          color: rgb(255, 255, 255);
+          font-size: 25px;
+          position: absolute;
+          top:100%;
+        }
+        .card button{
+          position: absolute;
+          left:50%;
+          transform: translateX(-50%);
+          top:80%;
+        }
+        .bottom{
+          color: aqua;
+          position: absolute;
+          transform: translateX(-50%);
+          left:50%;
+          top:-10%;
+          font-size: 20px;
+        }
+        .card-subtitle{
+          width: 150px;
+          background-color: rgba(224, 198, 145, 0.726);
+          position: absolute;
+          left:50%;
+          top:100%
+        }
+        .card button{
+          position: absolute;
+          top:100%;
+          left: 90%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <h1>Movies for 2021</h1>
+          </div>
+        </div>
+      </div>
+    <script>
+        fetch('https://api.themoviedb.org/3/discover/movie?api_key=96ff486e9cf6d18eee3f78feb6a80db6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year=2021&with_watch_monetization_types=flatrate')
+            .then((res)=>{
+                var data=res.json();
+                return data;
+            })
+            .then((data)=>{
+                data['results'].forEach(function(data){
+                    var col=document.querySelector('.col');
+                    col.innerHTML+=
+                    `
+        
+            <div class="card" style="background-image: url(https://image.tmdb.org/t/p/w500/${data['poster_path']})">
+              <div class="card-body">
+                  <h5 class="card-title">${data['original_title']}</h5>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#a${data['id']}">
+                    Detail
+                  </button>
+                  <div class="bottom">${data['release_date']}</div>
+                </div>
+              </div>
+          
+    
+    <!-- Modal -->
+  <div class="modal fade" id="a${data['id']}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">${data['original_title']}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ${data['overview']}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+                    `
+
+                })
+              
+
+            })
+    </script>
+</body>
+</html>
